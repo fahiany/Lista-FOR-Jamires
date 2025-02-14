@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>  
+
+int main() {
+    float compra, soma = 0, menorCompra, maiorCompra;
+    int i;
+
+    for(i = 1; i <= 10; i++) {
+        printf("Digite o valor da %dª compra: ", i);
+        scanf("%f", &compra);
+
+        if(i == 1) {
+            menorCompra = compra;
+            maiorCompra = compra;
+        }
+
+        soma = soma+compra;
+
+        if(compra<menorCompra) {
+            menorCompra=compra;
+        }
+        if(compra>maiorCompra) {
+            maiorCompra=compra;
+        }
+    }
+
+    float media = soma/10;
+
+    float diferenca = maiorCompra-menorCompra;
+
+    printf("A média das compras é %.2f\n", media);
+    printf("A menor compra foi %.2f\n", menorCompra);
+    printf("A maior compra foi %.2f\n", maiorCompra);
+    printf("A diferença entre a maior e a menor compra é %.2f\n", diferenca);
+
+    system("pause");
+
+    return 0;
+}
