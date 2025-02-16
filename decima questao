@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int A, i, fatorial = 1;
+    
+    printf("Digite um valor para A: ");
+    scanf("%d", &A);
+
+    if (A < 0) {
+        printf("Numeros negativos nao tem fatoriais. \n");
+    } else {
+        printf("%d! = ", A);
+        
+        for (i = A; i > 1; i--) {
+            printf("%d x ", i); 
+            fatorial = fatorial * i; 
+        }
+        printf("1 = %d\n", fatorial);
+    }
+
+    system("pause"); 
+    return 0;
+}
