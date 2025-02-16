@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int num, maior, menor, soma = 0;
+    float media;
+    int i;
+
+    printf("Digite o primeiro valor: ");
+    scanf("%d", &num);
+    
+    maior = num;
+    menor = num;
+    soma = num;
+
+    for (i = 2; i <= 10; i++) {
+        printf("Digite o %dº valor: ", i);
+        scanf("%d", &num);
+
+        if (num > maior) {
+            maior = num;
+        }
+
+        if (num < menor) {
+            menor = num;
+        }
+        soma = soma + num;
+    }
+
+    media = soma / 10.0;
+
+    printf("\nMaior valor: %d\n", maior);
+    printf("Menor valor: %d\n", menor);
+    printf("Média dos valores: %.2f\n", media);
+
+    system("pause");
+    return 0;
+}
