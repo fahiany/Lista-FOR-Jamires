@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int qtd, v, pos = 0, neg = 0;
+    float soma = 0, pPos, pNeg;
+    
+    printf("Digite a quantidade de entradas: ");
+    scanf("%d", &qtd);
+    
+    for (int i = 0; i < qtd; i++) {
+        printf("Digite o valor %d: ", i + 1);
+        scanf("%d", &v);
+        
+        soma = soma + v;
+        
+        if (v > 0) {
+            pos++;
+        } else if (v < 0) {
+            neg++;
+        }
+    }
+
+    pPos = (pos * 100) / qtd;  
+    pNeg = (neg * 100) / qtd;
+
+    printf("\n A média dos valores obtidos é: %.2f \n", soma / qtd);
+    printf("Os valores positivos são: %d\n", pos);
+    printf("Os valores negativos são: %d\n", neg);
+    printf("Percentual de valores positivos: %.2f \n", pPos);
+    printf("Percentual de valores negativos: %.2f \n", pNeg);
+
+    system("pause");  
+    return 0;
+}
