@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int id, p50 = 0, p60 = 0, p12 = 0;
+    float alt, peso;
+    int i;
+
+    for (i = 1; i <= 5; i++) {
+        printf("Digite a idade da pessoa %d: ", i);
+        scanf("%d", &id);
+
+        printf("Digite a altura da pessoa %d: ", i);
+        scanf("%f", &alt);
+
+        printf("Digite o peso da pessoa %d: ", i);
+        scanf("%f", &peso);
+
+        if (id > 50) {
+        p50++;
+}
+        if (peso < 60) {
+        p60++;
+}
+        if (alt >= 1.0 && alt <= 2.0) {
+        p12++;
+        }
+    }
+
+    printf("\nNúmero de pessoas com mais de 50 anos: %d\n", p50);
+    printf("Número de pessoas que pesam menos de 60kg: %d\n", p60);
+    printf("Número de pessoas com altura entre 1m e 2m: %d\n", p12);
+
+    system("pause");
+    return 0;
+}
