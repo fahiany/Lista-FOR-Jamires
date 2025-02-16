@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    float sal, maior = 0, somaSal = 0;
+    int filhos, somaFilhos = 0, baixo = 0;
+    int i;
+
+    for (i = 0; i < 10; i++) {
+        printf("Digite o salário da pessoa %d: ", i+1);
+        scanf("%f", &sal);
+
+        printf("Digite o número de filhos que a pessoa tem %d: ", i+1);
+        scanf("%d", &filhos); 
+
+        somaSal = somaSal + sal;
+
+        somaFilhos = somaFilhos + filhos;
+
+        if (sal > maior) {  
+            maior = sal;
+        }
+
+        if (sal <= 550) {  
+            baixo++;  
+        }
+    }
+
+    float mediaSal = somaSal/10;
+    float mediaFilhos = somaFilhos/10;
+    float pMenor = (baixo/10.0)*100;
+
+    printf("\nA média do salário é: R$ %.2f \n", mediaSal);
+    printf("A media do número de filhos: %.2f \n", mediaFilhos);
+    printf("Maior salário é: R$ %.2f \n", maior);
+    printf("Porcentagem de pessoas com salário de até R$ 550,00: %.2f \n", pMenor);
+
+    system("pause"); 
+    return 0;
+}
