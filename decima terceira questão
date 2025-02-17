@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>  // Necessário para usar system("pause")
+
+int main() {
+    int Z, X;
+
+    printf("Digite quantas vezes Z vai se repetir: ");
+    scanf("%d", &Z);
+
+    for (int i = 0; i < Z; i++) {
+        printf("Digite o valor de X: ");
+        scanf("%d", &X);
+
+        if (X % 2 != 0) {
+            X++; 
+        }
+
+        int soma = 0;
+        for (int i = 0; i < 5; i++) { 
+            soma = soma + X; 
+            X = X + 2;        
+        }
+
+        printf("A soma dos 5 números pares consecutivos é: %d\n", soma);
+    }
+
+system("pause");
+
+    return 0;
+}
